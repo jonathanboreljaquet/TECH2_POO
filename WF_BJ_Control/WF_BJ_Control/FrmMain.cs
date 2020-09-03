@@ -16,14 +16,5 @@ namespace WF_Control
         {
             InitializeComponent();
         }
-
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void TmrFrame_Tick(object sender, EventArgs e)
-        {
-            Invalidate();
-        }
     }
 }

@@ -23,8 +23,9 @@ namespace WF_Control
             };
             t.Tick += T_Tick;
             DoubleBuffered = true;
-            sprite = new Sprite(new Point(10,10),new Point(12,12));
+            sprite = new Sprite(new Point(10, 10), new Point(200, 200));
             Paint += sprite.Paint;
+            
         }
 
         private void T_Tick(object sender, EventArgs e)

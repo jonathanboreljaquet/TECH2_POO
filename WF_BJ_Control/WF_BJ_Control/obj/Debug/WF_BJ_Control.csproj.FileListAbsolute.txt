@@ -8,3 +8,13 @@ C:\Users\Administrateur\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Debug\
 C:\Users\Administrateur\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Debug\WF_BJ_Control.exe
 C:\Users\Administrateur\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Debug\WF_BJ_Control.pdb
 C:\Users\Administrateur\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Debug\WF_BJ_Control.FrmMain.resources
+C:\Users\JO-PC\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\bin\Debug\WF_BJ_Control.exe.config
+C:\Users\JO-PC\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\bin\Debug\WF_BJ_Control.exe
+C:\Users\JO-PC\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\bin\Debug\WF_BJ_Control.pdb
+C:\Users\JO-PC\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Debug\WF_BJ_Control.FrmMain.resources
+C:\Users\JO-PC\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Debug\WF_BJ_Control.Properties.Resources.resources
+C:\Users\JO-PC\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Debug\WF_BJ_Control.csproj.GenerateResource.cache
+C:\Users\JO-PC\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Debug\WF_BJ_Control.csproj.CoreCompileInputs.cache
+C:\Users\JO-PC\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Debug\WF_BJ_Control.exe
+C:\Users\JO-PC\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Debug\WF_BJ_Control.pdb
+C:\Users\JO-PC\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Debug\WF_BJ_Control.csprojAssemblyReference.cache
