@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Runtime.Remoting.Channels;
 using System.Windows.Forms;
@@ -9,22 +10,38 @@ namespace WF_Control
     {
         private const int FPS = 60;
         private Bitmap bitmap = null;
+
         private Graphics g = null;
         private readonly Sprite sprite = null;
         private Timer t;
 
+        private readonly List<Sprite> particles;
+        private readonly Random rnd;
 
         public Scene() : base()
-        {
+        {          
+            rnd = new Random();
+            particles = new List<Sprite>();
+            DoubleBuffered = true;
             t = new Timer
             {
                 Interval = 1000/ FPS,
                 Enabled = true
             };
             t.Tick += T_Tick;
-            DoubleBuffered = true;
-            sprite = new Sprite(new Point(10, 10), new Point(200, 200));
-            Paint += sprite.Paint;
+
+            for (int i = 0; i < 500; i++)
+            {
+                
+                Point startPostion = new Point(400,200);
+                Point speed = new Point(rnd.Next(-100, 100), rnd.Next(-100, 100));
+                int randomSize = rnd.Next(5, 8);
+                Size size = new Size(randomSize, randomSize);
+                sprite = new Sprite(startPostion,size,speed);
+                particles.Add(sprite);
+                Paint += sprite.Paint;
+            }
+            
             
         }
 

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WF_Control
+namespace WF_BJ_Control
 {
-    public partial class FrmMain : Form
+    public partial class frmMain : Form
     {
-        public FrmMain()
+        public frmMain()
         {
             InitializeComponent();
         }

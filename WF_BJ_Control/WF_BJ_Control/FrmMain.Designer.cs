@@ -1,6 +1,6 @@
-﻿namespace WF_Control
+﻿namespace WF_BJ_Control
 {
-    partial class FrmMain
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.scene = new WF_Control.Scene();
+            this.scene1 = new WF_Control.Scene();
             this.SuspendLayout();
             // 
-            // scene
+            // scene1
             // 
-            this.scene.BackColor = System.Drawing.Color.Purple;
-            this.scene.Location = new System.Drawing.Point(211, 105);
-            this.scene.Name = "scene";
-            this.scene.Size = new System.Drawing.Size(317, 214);
-            this.scene.TabIndex = 1;
-            this.scene.Text = "scene";
+            this.scene1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.scene1.Location = new System.Drawing.Point(12, 12);
+            this.scene1.Name = "scene1";
+            this.scene1.Size = new System.Drawing.Size(841, 499);
+            this.scene1.TabIndex = 0;
+            this.scene1.Text = "scene1";
             // 
-            // FrmMain
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.scene);
-            this.Name = "FrmMain";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(865, 523);
+            this.Controls.Add(this.scene1);
+            this.Name = "frmMain";
+            this.Text = "frmMain";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Scene scene;
+        private WF_Control.Scene scene1;
     }
 }
-

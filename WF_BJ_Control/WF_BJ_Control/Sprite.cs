@@ -10,6 +10,7 @@ namespace WF_Control
         private readonly Stopwatch sw;
         private PointF startPosition;
         private PointF speed;
+        private Size size;
 
         public PointF Location
         {
@@ -21,8 +22,9 @@ namespace WF_Control
             
         }
 
-        public Sprite(Point startPosition,Point speed)
+        public Sprite(Point startPosition,Size size,Point speed)
         {
+            this.size = size;
             this.startPosition = startPosition;
             this.speed = speed;
             sw = new Stopwatch();
@@ -33,7 +35,7 @@ namespace WF_Control
 
         public void Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.FillRectangle(Brushes.Azure, new Rectangle(Point.Round(Location),new Size(20,20)));
+            e.Graphics.FillRectangle(Brushes.Azure, new Rectangle(Point.Round(Location), size));
         }
 
     }
