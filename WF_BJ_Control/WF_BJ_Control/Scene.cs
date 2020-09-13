@@ -9,8 +9,14 @@ namespace WF_Control
     class Scene : Control
     {
         private const int FPS = 60;
-        private Bitmap bitmap = null;
+        private const int START_POSITION_X = 400;
+        private const int START_POSITION_Y = 200;
+        private const int MINIMUM_SIZE = 5;
+        private const int MAXIMUM_SIZE = 8;
+        private const int MINIMUM_SPEED = -100;
+        private const int MAXIMUM_SPEED = 100;
 
+        private Bitmap bitmap = null;
         private Graphics g = null;
         private readonly Sprite sprite = null;
         private Timer t;
@@ -32,10 +38,9 @@ namespace WF_Control
 
             for (int i = 0; i < 500; i++)
             {
-                
-                Point startPostion = new Point(400,200);
-                Point speed = new Point(rnd.Next(-100, 100), rnd.Next(-100, 100));
-                int randomSize = rnd.Next(5, 8);
+                Point startPostion = new Point(START_POSITION_X, START_POSITION_Y);
+                Point speed = new Point(rnd.Next(MINIMUM_SPEED, MAXIMUM_SPEED), rnd.Next(MINIMUM_SPEED, MAXIMUM_SPEED));
+                int randomSize = rnd.Next(MINIMUM_SIZE, MAXIMUM_SIZE);
                 Size size = new Size(randomSize, randomSize);
                 sprite = new Sprite(startPostion,size,speed);
                 particles.Add(sprite);
