@@ -5,33 +5,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WF_Control;
 
 namespace WF_BJ_Control
 {
     class Spatialship : Sprite
     {
-        const int SPEED_SPATIALSHIP = -20;
+        const int SPEED_SPATIALSHIP = 3;
         
-        public Spatialship(Point startPosition, Size size, Point speed) : base (startPosition,size,speed)
+        public Spatialship(Point startPosition,Point speed, Image image) : base (startPosition,speed, image)
         {
             //Do nothing
         }
-        public void MooveUpOrDown(int speed)
-        {
-            base.speed = new PointF(0, speed);
-        }
         public void OnKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Up)
+            if (e.KeyCode == Keys.Left)
             {
-                base.sw.Restart();
-                MooveUpOrDown(-10);
+                MooveLeft(SPEED_SPATIALSHIP);
             } 
-            if (e.KeyCode == Keys.Down)
+            if (e.KeyCode == Keys.Right)
             {
-                base.sw.Restart();
-                MooveUpOrDown(10);
+                MooveRight(SPEED_SPATIALSHIP);
             }
         }
     }

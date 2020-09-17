@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace WF_Control
+namespace WF_BJ_Control
 {
     static class Program
     {

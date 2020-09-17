@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Runtime.Remoting.Channels;
 using System.Windows.Forms;
-using WF_BJ_Control;
 
-namespace WF_Control
+namespace WF_BJ_Control
 {
     class Scene : Control
     {
         private const int FPS = 60;
-        private const int START_POSITION_X = 400;
-        private const int START_POSITION_Y = 200;
+        private const int START_POSITION_SPATIALSHIP_X = 420;
+        private const int START_POSITION_SPATIALSHIP_Y = 420;
         private const int MINIMUM_SIZE_PARTICULE = 5;
         private const int MAXIMUM_SIZE_PARTICULE = 8;
         private const int MINIMUM_SPEED = -100;
@@ -20,13 +19,12 @@ namespace WF_Control
         private Bitmap bitmap = null;
         private Graphics g = null;
         private readonly Spatialship spatialship = null;
+        private readonly Invader invader = null;
         private Timer t;
 
-        private readonly Random rnd;
 
         public Scene() : base()
         {          
-            rnd = new Random();
             DoubleBuffered = true;
             t = new Timer
             {
@@ -34,33 +32,42 @@ namespace WF_Control
                 Enabled = true
             };
             t.Tick += T_Tick;
-            Point startPostion = new Point(START_POSITION_X, START_POSITION_Y);
-            Point speed = new Point(0,0);
-            Size size = new Size(10, 10);
-            spatialship = new Spatialship(startPostion, size, speed);
+
+            Point startPostionShip = new Point(START_POSITION_SPATIALSHIP_X, START_POSITION_SPATIALSHIP_Y);
+            Point speedShip = new Point(0, 0);
+            spatialship = new Spatialship(startPostionShip, speedShip, Properties.Resources.cannon);
             KeyDown += spatialship.OnKeyDown;
             Paint += spatialship.Paint;
-           
-            
 
-            //for (int i = 0; i < 500; i++)
-            //{
-            //    Point startPostion = new Point(START_POSITION_X, START_POSITION_Y);
-            //    Point speed = new Point(rnd.Next(MINIMUM_SPEED, MAXIMUM_SPEED), rnd.Next(MINIMUM_SPEED, MAXIMUM_SPEED));
-            //    int randomSize = rnd.Next(MINIMUM_SIZE, MAXIMUM_SIZE);
-            //    Size size = new Size(randomSize, randomSize);
-            //    sprite = new Sprite(startPostion,size,speed);
-            //    Paint += sprite.Paint;
-            //}
-
+            Point startPostionInvader = new Point(0, 200);
+            Point speedInvader = new Point(1, 0);
+            invader = new Invader(startPostionInvader, speedInvader, Properties.Resources.invader);
+            Paint += invader.Paint;
 
         }
-
         private void T_Tick(object sender, EventArgs e)
         {
+            
+            if (spatialship.Location.X > this.Width - spatialship.Image.Width)
+            {
+                spatialship.MooveLeft(3);
+            }
+            if (spatialship.Location.X < 0)
+            {
+                spatialship.MooveRight(3);
+            }
+            if (invader.Location.X >300)
+            {
+                invader.Dispose();
+            }
             Invalidate();
            
         }
+        /// <summary>
+        /// Allows to consider directional arrows as Input key
+        /// </summary>
+        /// <param name="keyData"></param>
+        /// <returns></returns>
         protected override bool IsInputKey(Keys keyData)
         {
             if (keyData == Keys.Up)

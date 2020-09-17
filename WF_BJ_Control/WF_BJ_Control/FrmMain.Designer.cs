@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.scene1 = new WF_Control.Scene();
+            this.scene1 = new WF_BJ_Control.Scene();
             this.SuspendLayout();
             // 
             // scene1
@@ -54,6 +54,6 @@
 
         #endregion
 
-        private WF_Control.Scene scene1;
+        private WF_BJ_Control.Scene scene1;
     }
 }

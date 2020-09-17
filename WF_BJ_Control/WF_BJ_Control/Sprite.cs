@@ -1,42 +1,47 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Runtime;
+using System.Threading;
 using System.Windows.Forms;
 
-namespace WF_Control
+namespace WF_BJ_Control
 {
     public class Sprite
     {
-        protected readonly Stopwatch sw;
+        private const int NO_SPEED_Y = 0;
         private PointF startPosition;
-        protected PointF speed; 
-        private Size size;
+        private PointF speed; 
 
         public PointF Location
         {
             get 
             {
-                float elapsedTime = sw.ElapsedMilliseconds / 1000f;
-                startPosition = new PointF(startPosition.X + elapsedTime * speed.X, startPosition.Y + elapsedTime * speed.Y);
+                startPosition = new PointF(startPosition.X + speed.X, startPosition.Y + speed.Y);
                 return startPosition;
             }
-            
-        }
 
-        public Sprite(Point startPosition,Size size,Point speed)
+        }
+        public Image Image { get; private set; }
+
+        public Sprite(Point startPosition,Point speed, Image image)
         {
-            this.size = size;
             this.startPosition = startPosition;
             this.speed = speed;
-            sw = new Stopwatch();
-            sw.Start();
+            this.Image = image;
         }
-
-        
-
         public void Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.FillRectangle(Brushes.Azure, new Rectangle(Point.Round(Location), size));
+            e.Graphics.DrawImage(Image, Location);
         }
+        public void MooveLeft(int speed)
+        {
+            this.speed = new PointF(speed * -1, NO_SPEED_Y);
+        }
+        public void MooveRight(int speed)
+        {
+            this.speed = new PointF(speed, NO_SPEED_Y);
+        }
+
     }
 }
