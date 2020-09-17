@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace WF_Control
 {
-    class Sprite
+    public class Sprite
     {
-        private readonly Stopwatch sw;
+        protected readonly Stopwatch sw;
         private PointF startPosition;
-        private PointF speed;
+        protected PointF speed; 
         private Size size;
 
         public PointF Location
@@ -17,7 +17,8 @@ namespace WF_Control
             get 
             {
                 float elapsedTime = sw.ElapsedMilliseconds / 1000f;
-                return new PointF(startPosition.X + elapsedTime * speed.X, startPosition.Y + elapsedTime * speed.Y); 
+                startPosition = new PointF(startPosition.X + elapsedTime * speed.X, startPosition.Y + elapsedTime * speed.Y);
+                return startPosition;
             }
             
         }
@@ -37,6 +38,5 @@ namespace WF_Control
         {
             e.Graphics.FillRectangle(Brushes.Azure, new Rectangle(Point.Round(Location), size));
         }
-
     }
 }

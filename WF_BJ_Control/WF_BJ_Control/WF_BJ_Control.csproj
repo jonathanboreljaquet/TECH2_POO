@@ -59,6 +59,7 @@
     <Compile Include="Scene.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Spatialship.cs" />
     <Compile Include="Sprite.cs" />
     <EmbeddedResource Include="FrmMain.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">

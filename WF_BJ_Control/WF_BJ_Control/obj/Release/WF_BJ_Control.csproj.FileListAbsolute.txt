@@ -1,0 +1,9 @@
+C:\Users\Administrateur\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\bin\Release\WF_BJ_Control.exe.config
+C:\Users\Administrateur\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\bin\Release\WF_BJ_Control.exe
+C:\Users\Administrateur\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\bin\Release\WF_BJ_Control.pdb
+C:\Users\Administrateur\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Release\WF_BJ_Control.FrmMain.resources
+C:\Users\Administrateur\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Release\WF_BJ_Control.Properties.Resources.resources
+C:\Users\Administrateur\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Release\WF_BJ_Control.csproj.GenerateResource.cache
+C:\Users\Administrateur\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Release\WF_BJ_Control.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Release\WF_BJ_Control.exe
+C:\Users\Administrateur\Desktop\TECH2_POO\WF_BJ_Control\WF_BJ_Control\obj\Release\WF_BJ_Control.pdb
