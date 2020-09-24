@@ -9,39 +9,35 @@ namespace WF_BJ_Control
 {
     public class Sprite
     {
-        private const int NO_SPEED_Y = 0;
-        private PointF startPosition;
-        private PointF speed; 
+        protected float elapsedTime;
+        protected PointF startPosition;
+        protected PointF speed;
+        protected readonly Stopwatch sw;
 
         public PointF Location
         {
             get 
             {
-                startPosition = new PointF(startPosition.X + speed.X, startPosition.Y + speed.Y);
-                return startPosition;
+                elapsedTime = sw.ElapsedMilliseconds / 1000f;
+                return new PointF(startPosition.X + elapsedTime * speed.X, startPosition.Y + elapsedTime * speed.Y);
             }
 
         }
         public Image Image { get; private set; }
 
-        public Sprite(Point startPosition,Point speed, Image image)
+        public Sprite(PointF startPosition, PointF speed, Image image)
         {
             this.startPosition = startPosition;
             this.speed = speed;
             this.Image = image;
+            sw = new Stopwatch();
+            sw.Start();
         }
         public void Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.DrawImage(Image, Location);
         }
-        public void MooveLeft(int speed)
-        {
-            this.speed = new PointF(speed * -1, NO_SPEED_Y);
-        }
-        public void MooveRight(int speed)
-        {
-            this.speed = new PointF(speed, NO_SPEED_Y);
-        }
+        
 
     }
 }

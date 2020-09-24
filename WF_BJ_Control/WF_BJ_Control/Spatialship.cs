@@ -10,22 +10,30 @@ namespace WF_BJ_Control
 {
     class Spatialship : Sprite
     {
-        const int SPEED_SPATIALSHIP = 3;
+        private const int NO_SPEED_Y = 0;
         
-        public Spatialship(Point startPosition,Point speed, Image image) : base (startPosition,speed, image)
+        public Spatialship(PointF startPosition, PointF speed, Image image) : base (startPosition,speed, image)
         {
+
             //Do nothing
         }
         public void OnKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
+            if (e.KeyCode == Keys.Space)
             {
-                MooveLeft(SPEED_SPATIALSHIP);
+                Move();
             } 
-            if (e.KeyCode == Keys.Right)
-            {
-                MooveRight(SPEED_SPATIALSHIP);
-            }
+        }
+        public void ShootRocket()
+        {
+            
+        }
+        public void Move()
+        {
+            float endPositionX = startPosition.X + elapsedTime * speed.X;
+            startPosition.X = endPositionX;
+            this.speed = new PointF(speed.X * -1, NO_SPEED_Y);
+            sw.Restart();
         }
     }
 }

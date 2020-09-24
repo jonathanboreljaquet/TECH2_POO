@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace WF_BJ_Control
 {
-    class Invader : Sprite     
+    class Rocket : Sprite
     {
-        public Invader(PointF startPosition, PointF speed, Image image) : base(startPosition,speed, image)
+        public Rocket(PointF startPosition, PointF speed, Image image):base(startPosition,speed,image)
         {
-            //Do nothing
+            
         }
-
-
     }
 }

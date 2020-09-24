@@ -33,60 +33,31 @@ namespace WF_BJ_Control
             };
             t.Tick += T_Tick;
 
-            Point startPostionShip = new Point(START_POSITION_SPATIALSHIP_X, START_POSITION_SPATIALSHIP_Y);
-            Point speedShip = new Point(0, 0);
+            PointF startPostionShip = new PointF(START_POSITION_SPATIALSHIP_X, START_POSITION_SPATIALSHIP_Y);
+            PointF speedShip = new PointF(100, 0);
             spatialship = new Spatialship(startPostionShip, speedShip, Properties.Resources.cannon);
             KeyDown += spatialship.OnKeyDown;
             Paint += spatialship.Paint;
 
-            Point startPostionInvader = new Point(0, 200);
-            Point speedInvader = new Point(1, 0);
+            PointF startPostionInvader = new PointF(0, 200);
+            PointF speedInvader = new PointF(100, 0);
             invader = new Invader(startPostionInvader, speedInvader, Properties.Resources.invader);
             Paint += invader.Paint;
 
         }
         private void T_Tick(object sender, EventArgs e)
         {
-            
             if (spatialship.Location.X > this.Width - spatialship.Image.Width)
             {
-                spatialship.MooveLeft(3);
+                spatialship.Move();
             }
             if (spatialship.Location.X < 0)
             {
-                spatialship.MooveRight(3);
+                spatialship.Move();
             }
-            if (invader.Location.X >300)
-            {
-                invader.Dispose();
-            }
+
             Invalidate();
            
-        }
-        /// <summary>
-        /// Allows to consider directional arrows as Input key
-        /// </summary>
-        /// <param name="keyData"></param>
-        /// <returns></returns>
-        protected override bool IsInputKey(Keys keyData)
-        {
-            if (keyData == Keys.Up)
-            {
-                return true;
-            }
-            if (keyData == Keys.Down)
-            {
-                return true;
-            }
-            if (keyData == Keys.Right)
-            {
-                return true;
-            }
-            if (keyData == Keys.Left)
-            {
-                return true;
-            }
-            return base.IsInputKey(keyData);
         }
         protected override void OnPaint(PaintEventArgs e)
         {
