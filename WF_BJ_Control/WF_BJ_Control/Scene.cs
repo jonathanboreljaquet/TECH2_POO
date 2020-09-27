@@ -38,24 +38,23 @@ namespace WF_BJ_Control
             spatialship = new Spatialship(startPostionShip, speedShip, Properties.Resources.cannon);
             KeyDown += spatialship.OnKeyDown;
             Paint += spatialship.Paint;
-
             PointF startPostionInvader = new PointF(0, 200);
             PointF speedInvader = new PointF(100, 0);
             invader = new Invader(startPostionInvader, speedInvader, Properties.Resources.invader);
-            Paint += invader.Paint;
+            Paint += invader.Paint;                
+            
 
         }
         private void T_Tick(object sender, EventArgs e)
         {
-            if (spatialship.Location.X > this.Width - spatialship.Image.Width)
+            if (spatialship.Location.X >= this.Width - spatialship.Image.Width|| spatialship.Location.X <= 0)
             {
-                spatialship.Move();
+                spatialship.ChangeDirection();
             }
-            if (spatialship.Location.X < 0)
+            if (invader.Location.X > this.Width - invader.Image.Width || invader.Location.X < 0)
             {
-                spatialship.Move();
+                invader.MoveDown();
             }
-
             Invalidate();
            
         }

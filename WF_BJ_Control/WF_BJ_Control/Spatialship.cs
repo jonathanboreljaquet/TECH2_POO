@@ -21,14 +21,14 @@ namespace WF_BJ_Control
         {
             if (e.KeyCode == Keys.Space)
             {
-                Move();
+                ChangeDirection();
             } 
         }
         public void ShootRocket()
         {
             
         }
-        public void Move()
+        public void ChangeDirection()
         {
             float endPositionX = startPosition.X + elapsedTime * speed.X;
             startPosition.X = endPositionX;
