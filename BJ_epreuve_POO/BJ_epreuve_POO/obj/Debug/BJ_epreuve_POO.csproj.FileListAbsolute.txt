@@ -1,0 +1,10 @@
+C:\Users\Administrateur\Desktop\TECH2_POO\BJ_epreuve_POO\BJ_epreuve_POO\bin\Debug\BJ_epreuve_POO.exe.config
+C:\Users\Administrateur\Desktop\TECH2_POO\BJ_epreuve_POO\BJ_epreuve_POO\bin\Debug\BJ_epreuve_POO.exe
+C:\Users\Administrateur\Desktop\TECH2_POO\BJ_epreuve_POO\BJ_epreuve_POO\bin\Debug\BJ_epreuve_POO.pdb
+C:\Users\Administrateur\Desktop\TECH2_POO\BJ_epreuve_POO\BJ_epreuve_POO\obj\Debug\BJ_epreuve_POO.csprojAssemblyReference.cache
+C:\Users\Administrateur\Desktop\TECH2_POO\BJ_epreuve_POO\BJ_epreuve_POO\obj\Debug\BJ_epreuve_POO.Form1.resources
+C:\Users\Administrateur\Desktop\TECH2_POO\BJ_epreuve_POO\BJ_epreuve_POO\obj\Debug\BJ_epreuve_POO.Properties.Resources.resources
+C:\Users\Administrateur\Desktop\TECH2_POO\BJ_epreuve_POO\BJ_epreuve_POO\obj\Debug\BJ_epreuve_POO.csproj.GenerateResource.cache
+C:\Users\Administrateur\Desktop\TECH2_POO\BJ_epreuve_POO\BJ_epreuve_POO\obj\Debug\BJ_epreuve_POO.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Desktop\TECH2_POO\BJ_epreuve_POO\BJ_epreuve_POO\obj\Debug\BJ_epreuve_POO.exe
+C:\Users\Administrateur\Desktop\TECH2_POO\BJ_epreuve_POO\BJ_epreuve_POO\obj\Debug\BJ_epreuve_POO.pdb
